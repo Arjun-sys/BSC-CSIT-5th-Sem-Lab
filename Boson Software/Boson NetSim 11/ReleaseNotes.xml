@@ -1,0 +1,541 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ArrayOfReleaseNote xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <ReleaseNote>
+	<Version>11.7</Version>
+	<ReleaseDate>2017-10-16T00:00:00</ReleaseDate>
+	<Notes>- Added support CCNP Courseware.
+- Fixed an issue causing errors downloading large content updates.
+</Notes>
+  </ReleaseNote>
+  <ReleaseNote>
+	<Version>11.6</Version>
+	<ReleaseDate>2017-03-28T00:00:00</ReleaseDate>
+	<Notes>- Added support for configuring EIGRP hello-interval.
+- Added support for the *show archive config differences* command.
+- Fixed an issue in the *show flash* command which caused startup-configurations not to appear.
+- Fixed an issue in the *show standby* command causing empty output.
+- Fixed an issue causing expired ARP cache entries to remain after shutting down an interface.
+- Fixed *show interface trunk* output inconsistencies.
+- Fixed the default priority displayed for PVST in various show commands.
+</Notes>
+  </ReleaseNote>
+  <ReleaseNote>
+	<Version>11.5</Version>
+	<ReleaseDate>2017-02-07T00:00:00</ReleaseDate>
+	<Notes>- Fixed a "do logout" command bug which caused the console to lock.
+- Added support for routers to configure "vty line 0 15".
+- Fixed a case-related bug when configuring IPv6 routes with an address next-hop.
+- Rewrote the implementation of Is_Wildcard_Valid to work correctly for all cases and not error out on an exception.
+- Added support for the RIP "passive-interface default" command.
+- Fixed numerous command database errors where numeric ranges were improperly labeled as WORD-type commands.
+- Fixed a minor HSRP output bug.
+- Fixed a few minor document errors.
+</Notes>
+  </ReleaseNote>
+  <ReleaseNote>
+	<Version>11.4</Version>
+	<ReleaseDate>2016-12-06T00:00:00</ReleaseDate>
+	<Notes>- Moved proxy settings to the credentials view.
+- Added support for prefilling activation keys.
+- Touched up the UI for adding activation keys. Successfully activated keys now appear green and failed keys appear red.
+- Replaced the blue "Remove Key" text with the recognizable close button. 
+- Slightly adjusted the dimensions of the activation window.
+- Fixed no password required bug for *no login* command..
+- Fixed a unicast packet out of switch bug when no source interface is found.
+- Fixed OSPF bug that caused Summary LSAs to linger if the device that advertised the LSAs wasn't first brought down (remote device wouldn't flush LSAs on neighbor down).
+- Added support for OSPF to work with IPv6 autoconfig.
+- Fixed a bug that allowed OSPF packets to be sent with no source IP.
+- Cleaned up output builder code for tracking.
+- Fixed a bug that failed to find correct interface index for VLANs in the VLAN0100 format.
+</Notes>
+  </ReleaseNote>
+  <ReleaseNote>
+	<Version>11.3</Version>
+	<ReleaseDate>2016-10-06T00:00:00</ReleaseDate>
+	<Notes>- Added four new Standard ICND2 labs and one new Courseware lab.
+- Added a new method to view the results of a graded Lab. You may now view results as two separate files (expected vs yours). 
+- Increased the default dimensions of the preferences window.
+- Added support for a switch to be an NTP master.
+- Added additional object tracking output for VRRP.
+- Updated *standby track* command behavior to match IOS 15.
+- Fixed numerous FHRP issues causing incorrect state changes.
+- Fixed a bug displaying canned virtual MAC information in VRRP.
+- Fixed a bug causing BGP not to get router-id on interface protocol and address change events.
+- Fixed a bug preventing IPv6 from traversing Frame-relay connections appropriately.
+- Fixed a bug preventing motd banners from being configured from a loading configuration.
+- Fixed a bug causing occasional EIGRP SIA.
+- Fixed a bug preventing Dialer interfaces from being removed with the no dialer interface command.
+- Added support for SLAAC on L3 switches.
+- Added the log keyword to standard named ACLs.
+- Removed the Standard lab tree for the 100-101 and 200-120 exams. The Courseware lab tree for the older exams will still appear if activated.
+</Notes>
+  </ReleaseNote>
+  <ReleaseNote>
+	<Version>11.2</Version>
+	<ReleaseDate>2016-08-10T00:00:00</ReleaseDate>
+	<Notes>- Added support for the Courseware v3 lab tree and labs.
+- Fixed a RIP passive-interface issue.
+- Fixed an output filtering issue on switches.
+- Fixed a missing SSH error message issue.
+- Fixed the Expring CCNA (v2) tree to correctly display retiring labs.
+</Notes>
+  </ReleaseNote>
+  <ReleaseNote>
+	<Version>11.1</Version>
+	<ReleaseDate>2016-07-05T00:00:00</ReleaseDate>
+	<Notes>- Moved the "Configuring Basic Border Gateway Protocol" lab from CCNP to ICND2.
+- Added support for RIP default passive-interfaces.
+- Added support for PCs to acquire manual IPv6 addresses from the loading config.
+- Updated default value of vty login to be true.
+- Fixed a bug allowing SSH access to ignore ACL rules.
+- Fixed a bug allowing some RIP passive-interfaces to continue advertising RIP. 
+- Fixed an issue which caused an activation successful message to display when activation failed.
+- Fixed a minor output issue for the *show port-security* command.
+- Updated PPP and PPP Authentication debug output.
+- Updated version from 12.3 to 15.b.
+- Updated output for *show ntp status* and *show ntp associations*
+- Updated output for *show ip protocols* for RIP.
+- Fixed a bug in *show ip rip database*.
+- Fixed a bug in generating rsa keys that allowed a switch to have a default hostname.
+</Notes>
+  </ReleaseNote>
+  <ReleaseNote>
+	<Version>11.0</Version>
+	<ReleaseDate>2016-05-31T00:00:00</ReleaseDate>
+	<Notes>- Added 7 new ICND1 and ICND2 labs.
+- Reorganized ICND1 and ICND2 lab trees to closely match Cisco's latest CCNA curriculum outline. The old organization can be found in the "Expiring CCNA" lab tree.
+- Added support for filtering all show outputs with output modifiers.
+- Added support for configuring the Native VLAN.
+- Added support for PPPoE.
+- Added support for Named Standard Access Control Lists.
+- Added support for IPv6 Access Control Lists.
+- Added support for SNMP.
+- Added support for System Message Logging.
+- Added support for SSH.
+- Added support for IPv6 addresses when configuring the default-gateway of a PC.
+- Added support for enabling and disabling VLANs.
+- Added support for ProxyARP.
+- Added support for OSPF over multilink interfaces.
+- Added support for globally setting the default portfast bpduguard.
+- Added support for originating default route information in RIP.
+- Added support for the *show vtp password* command.
+- Added support for displaying the RIP database.
+- Added support for recording the autonomous-system in routing updates.
+- Added support for additional switchport port-security options.
+- Added the *ip helper-address* command to sub-interfaces.
+- Added the *switchport trunk allowed vlan* command to PortChannel interfaces.
+- Added the *show standby* command to routers.
+- Updated all lab documents with 'Grade Lab' reminder.
+- Fixed line vty access-class configuration to be case-sensitive.
+- Fixed the *show running-config* interface command for sub-interfaces.
+- Fixed an input validation bug for wildcard masks.
+- Fixed a bug with BGP not advertising non-Connected routes correctly.
+- Fixed ACL processing to block FHRP packets correctly.
+- Fixed the *show vlan* command to display voice VLANs.
+- Fixed the *show spanning-tree* command to display correct bridge priority.
+- Updated output for the *show ip access-lists* command.
+- Updated output for the *show ip ospf interface* command.
+- Updated output for the *show ppp multilink* command.
+- Updated output for the *show ip dhcp binding lease time* command.
+- Updated output for the *show interface trunk* command.
+- Updated output for the *show port-security* command.
+- Updated output for the *show ntp status* command.
+</Notes>
+  </ReleaseNote>
+  <ReleaseNote>
+	<Version>10.13</Version>
+	<ReleaseDate>2016-03-09T00:00:00</ReleaseDate>
+	<Notes>EIGRP/EIGRPv6
+- Added support for passive-interface default in classic and named configuration mode.
+- Fixed issue related to missing summaries after covered routes are learned.
+- Fixed issue causing redistribution commands appearing under both address-family sections for EIGRP named mode.
+&#x0d;&#x0a;OSPF/OSPFv3
+- Fixed passive-interfaces not appearing in running-config unless already running OSPF.
+- Added support for the OSPF passive-interface command on PortChannel and GigabitEthernet interfaces.
+- Added support for passive-interface default.
+- Fixed the *distance &lt;1-255&gt;* command. This command previously had no effect.
+- Fixed issuing allowing LSAs to converge between non-backbone areas.
+- Fixed an issue causing redistribution out of EIGRP external routes to fail.
+- Updated output of *show ip ospf interface* command to display actual hello due time, when an interface is enabled by interface-config, and when an interface is configured to be passive. 
+&#x0d;&#x0a;IP/IPv6
+- Added support for filtering the IPv4 and IPv6 routing table by protocol.
+- Updated *ipv6 unicast-routing* command to automatically enable/disable *ipv6 cef*.
+- Added support for displaying detailed IPv6 routing information by network address (X:X:X:X::/&lt;0-128&gt;).
+- Fixed an IPv6 neighbor-discovery bug causing pings to non-neighbors to fail.
+&#x0d;&#x0a;Tunnel Interfaces
+- Fixed issue with tunnel protocol state. A tunnel interface should not transition up when the tunnel destination is in the same subnet as the tunnel IP address.
+&#x0d;&#x0a;RIP
+- Fixed RIPv1 auto-summarization issue in routing advertisements.
+- Fixed Router Information Sources output for the *show ip protocols* command.
+&#x0d;&#x0a;Other
+- Added support for disabling Lab Solutions and final running-configurations from being displayed in lab documents. This setting is located in Edit -> Preferences and under the General tab.
+</Notes>
+  </ReleaseNote>
+  <ReleaseNote>
+	<Version>10.12</Version>
+	<ReleaseDate>2016-02-09T00:00:00</ReleaseDate>
+	<Notes>- Fixed an issue with lab updates after clean-install not syncing correctly.
+- Fixed an issue with labs disappearing from the lab tree after update due to database size limitations.
+- Added support for collecting usage information for the purpose of personalizing a user's experience. You may update your preference in Edit -> Preferences -> Privacy Settings.
+</Notes>
+  </ReleaseNote>
+  <ReleaseNote>
+	<Version>10.11</Version>
+	<ReleaseDate>2016-01-19T00:00:00</ReleaseDate>
+	<Notes>- Added 2 new labs covering Gateway Load Balancing Protocol (GLBP).
+&#x0d;&#x0a;EIGRP/EIGRPv6
+- Added VLAN support for passive interfaces.
+- Added support for the *ipv6 summary-address* command for interfaces in classic and named configuration mode.
+- Added support for route convergence between non-EIGRPv6 peers.
+- Added support for passive sub-interfaces.
+- Fixed order of ip summary address in classic and named configuration mode. Configuration appears sorted now.
+&#x0d;&#x0a;OSPF
+- Added VLAN support for passive interfaces.
+- Fixed behavior of non-backbone systems to advertise LSAs to other non-backbones. 
+- Fixed *show ip ospf interface _interface-name_* command to work correctly when a space is used between interface name and port number.
+- Fixed bug causing duplicate router-id debug messages.
+&#x0d;&#x0a;IPv6 Static Routes
+- Fixed static route configuration when including a space between interface name and port number.
+- Fixed bug for static IPv6 routes configured by interface name not appearing in routing table. 
+&#x0d;&#x0a;Console Services
+- Updated enable secret commands to use authentic Cisco MD5 hashing. Passwords are no longer stored in clear text when you Export Configs!
+- Updated all NetSim content to use updated enable secret hashes. 
+- Fixed transport input command to correctly restrict access by console, vty, and ssh.
+&#x0d;&#x0a;Other
+- Fixed cursor position on console when login local is enabled (GUI).
+- Fixed speed command in interface-range configuration mode (command parsing).
+- Fixed show ip nat statistics command not displaying inside interface when the inside interface was a sub-interface (NAT).
+</Notes>
+  </ReleaseNote>
+  <ReleaseNote>
+	<Version>10.10</Version>
+	<ReleaseDate>2015-11-09T00:00:00</ReleaseDate>
+	<Notes>- Added 10 new CCNP labs covering Gateway Load Balancing Protocol (GLBP), Border Gateway Protocol (BGP) and other routing protocols.
+- Added support for GLBP on routers.
+- Added new keyboard shortcut for the Start Simulator button. The keys Ctrl + F5 may be used when the Network Designer is displayed to "Start Simulator". 
+- Fixed an issue causing offline activation not to stick.
+&#x0d;&#x0a;BGP
+- Added support for removing a BGP configuration with the *no router bgp* command.
+- Fixed duplicate status codes in BGP paths.
+- Fixed neighbor TblVersion in *show ip bgp summary* command.
+- Fixed bug allowing duplicate as-path-access-list filter entries. 
+- Tweaked *show ip bgp neighbors* command to display more helpful and accurate information for IDLE state.
+- Fixed bug in *show ip bgp summary* command which displayed incorrect up/down time when a connection has never established.
+- Fixed AS-PATH Prepend to insert new AS at end of list vs in the beginning of list.
+- Fixed OPEN process to use random start up time to help avoid race conditions and longer peering.
+- Added support for BGP neighbor password feature.
+- Fixed OPEN messages to send only when connection not Established.
+- Added new OPEN CONFIRM message type.
+- Modified OPEN peering process to reflect BGP FSM more accurately.
+- Fixed a recursive route-lookup bug which BGP uses.
+- Removed several global fields in the core routing engine which could potentially cause issues when multiple packets are routed simultaneously.
+- Fixed BGP Path Selection algorithm to only consider route age when both paths are eBGP paths.
+- Fixed issue with un/marking routes to be best in the BGP RIB.
+- Added accurate prefix received, sent, and best used statistics to the *show ip bgp neighbor* command output.
+- Added per neighbor-granular support to the *show ip bgp neighbor* command.
+&#x0d;&#x0a;OSPFv3
+- Fixed interfaces staying down after a router-id configured.
+- Fixed bug causing all interface masks to fall in Area 0.
+- Fixed a bug in fetching an available router-id. A protocol UP event on a device other than the one being loaded may cause an out of range exception for the device being configured with OSPF.
+&#x0d;&#x0a;EIGRPv6
+- Fixed router-id parsing and output bug.
+- Fixed automatic router-id bug.
+- Fixed bug displaying eigrp summary configurations unordered.
+- Fixed bug allowing duplicate summary addresses to be configured.
+&#x0d;&#x0a;IPv6
+- Fixed dropping leading zeros in last octet when configuring IPv6 addresses.
+- Updated output of *show ipv6 protocols* to only display "static" when static routes exist.
+&#x0d;&#x0a;IP SLA
+- Fixed bug which allowed ECHO-REQUESTS to succeed to a down interface. 
+- Fixed last start time attribute in the *show ip sla statistics* command.
+</Notes>
+  </ReleaseNote>
+  <ReleaseNote>
+	<Version>10.9</Version>
+	<ReleaseDate>2015-08-26T00:00:00</ReleaseDate>
+	<Notes>- Added 5 new CCNP labs covering Border Gateway Protocol (BGP) and Dynamic Host Configuration Protocol version 6 (DHCPv6).
+- Completely rewrote BGP to address the requirements in CCNPv5. Many new commands and feature are available.
+- Added support for more granular debugging control within routing protocols.
+- Fixed several bugs with VRRP/HSRP Object tracking.
+- Fixed a layer 2 VLAN issue affecting traffic forwarding.
+</Notes>
+  </ReleaseNote>
+  <ReleaseNote>
+	<Version>10.8</Version>
+	<ReleaseDate>2015-06-29T00:00:00</ReleaseDate>
+	<Notes>- Added 11 new labs (6 new CCENT labs, 2 new CCNA labs, and 3 new CCNP labs). 
+- Added support for stateless Dynamic Host Configuration Protocol version 6 (DHCPv6) relay.
+- Updated Virtual Router Redundancy Protocol (VRRP) track command to support default input.
+- Fixed missing grading for Spanning Tree MST Optimization and Spanning Tree PVST Load Balancing labs. 
+- Fixed DEMO activation issue introduced in 10.7 release.
+- Fixed several minor lab document issues.</Notes>
+  </ReleaseNote>
+  <ReleaseNote>
+	<Version>10.7</Version>
+	<ReleaseDate>2015-05-19T00:00:00</ReleaseDate>
+	<Notes>- Added 12 new CCNP Troubleshooting Ticket labs. These labs are presented in a way to not reveal the issue by lab title and mimic what is found in the official curriculum.
+- Added support for configuring the timestamp format for logging and debug messages. The supported types are datetime, datetime (with milliseconds), and uptime.
+- Added support for Access Control List (ACL) commands on VLAN and subinterfaces.
+- Added support for issuing tracert on PCs using a host name.
+- Added support for logging Named ACL matches.
+- Added support for additional Host-Standby Router Protocol (HSRP) and Virtual Router Redundancy Protocol (VRRP) debugging outputs.
+- Added support for filtering by Summary Link-State Advertisements (LSAs) in Open Shortest Path First (OSPF).
+- Added additional tips to progress dialog screens.
+- Added progress bar to activate keys window.
+- Fixed a bug causing Enhanced Interior Gateway Routing Protocol (EIGRP) topology to not update following a change to an IP prefix-list.
+- Fixed a Dynamic Multipoint Virtual Private Network (DMVPN) bug on Frame-Relay interfaces.
+- Fixed numerous HSRP and VRRP instability issues.</Notes>
+  </ReleaseNote>
+  <ReleaseNote>
+	<Version>10.6</Version>
+	<ReleaseDate>2015-04-07T00:00:00</ReleaseDate>
+	<Notes>- Added 3 new CCENT labs for configuring basic network services and troubleshooting Domain Name System (DNS).
+- Added 5 new CCNA labs for troubleshooting Access Control Lists (ACLs) and Frame-Relay.
+- Added support for configuring non-contiguous ranges of interfaces. 
+- Added support for applying ACLs to Virtual Terminal Lines (VTY).
+- Added support for Network Address Translation (NAT) on subinterfaces.
+- Fixed an Address Resolution Protocol (ARP) bug to NAT interfaces.
+- Fixed a Enhanced Interior Gateway Routing Protocol (EIGRP) bug which caused named-mode configurations including redistribution to be lost when exported.
+- Fixed several Tunnel interface bugs which lost source/destination parameters when subinterfaces were used.
+- Fixed a bug which caused statically configured routes to be lost after the clear ip route * command was issued.
+- Fixed minor output formatting issues for NAT, Stackwise, and mac-address tables.
+- Updated multiple lab documents with relevant output.</Notes>
+  </ReleaseNote>
+  <ReleaseNote>
+	<Version>10.5</Version>
+	<ReleaseDate>2015-03-03T00:00:00</ReleaseDate>
+	<Notes>- Added 3 new CCNP labs for CCNPv5.
+- Added 5 new CCENT Access Control Lists (ACL) practice labs.
+- Added support for Dynamic Host Configuration Protocol version 6 (DHCPv6).
+- Fixed several Dynamic Host Configuration Protocol (DHCP) bugs.
+- Fixed several minor lab document issues.</Notes>
+  </ReleaseNote>
+  <ReleaseNote>
+	<Version>10.4</Version>
+	<ReleaseDate>2015-01-27T00:00:00</ReleaseDate>
+	<Notes>- Added 4 new CCNP labs for CCNPv5.
+- Added 6 new CCENT Variable Length Subnet Masks (VLSMs) practice labs.
+- Added support for redistribution using route maps with Open Shortest Path First (OSPF) and Enhanced Interior Gateway Routing Protocol (EIGRP).
+- Added support for prefix-lists.
+- Added support for Service Level Agreements (SLAs).
+- Added support for the show ip route detail command.
+- Added support in OSPF for the forwarding metric.
+- Improved command parsing execution and auto-complete.
+- Fixed a bug in the OSPF router-id selection algorithm.
+- Fixed several minor lab document issues.</Notes>
+  </ReleaseNote>
+  <ReleaseNote>
+	<Version>10.3</Version>
+	<ReleaseDate>2014-12-11T00:00:00</ReleaseDate>
+	<Notes>- Added 2 new CCNP labs for CCNPv5.
+- Added support for Virtual Router Redundancy Protocol (VRRP) authentication.
+- Added support for StackWise protocol.
+- Added two new devices: 3750 switch and 3750 stacked switch (permits up to 9 in the stack).
+- Fixed several minor lab document issues.</Notes>
+  </ReleaseNote>
+  <ReleaseNote>
+	<Version>10.2</Version>
+	<ReleaseDate>2014-11-04T00:00:00</ReleaseDate>
+	<Notes>- Added 5 new CCNP labs for CCNPv5.
+- Added support for creating manual Dynamic Host Configuration Protocol (DHCP) bindings.
+- Added support for default route information in Routing Information Protocol next-generation(RIPng). 
+- Added support for several new RIPng show commands. 
+- Fixed several DHCP and RIP bugs. 
+- Fixed an ACL bug that incorrectly filtered self-originated traffic in certain circumstances.</Notes>
+  </ReleaseNote>
+  <ReleaseNote>
+	<Version>10.1</Version>
+	<ReleaseDate>2014-10-06T00:00:00</ReleaseDate>
+	<Notes>- Added 4 new CCNP labs for CCNPv5.
+- Added support for Network Time Protocol (NTP) Access Control Lists (ACLs).
+- Added support for accurate Enhanced Interior Gateway Routing Protocol (EIGRP) statistics.
+- Added support for configuring the Open Shortest Path First (OSPF) network type.
+- Added support for reporting the actual OSPF dead time for neighbors.
+- Fixed an OSPF bug causing LOOP network type interfaces to advertise the interface mask instead of a /32.
+- Fixed an OSPF bug causing the wrong network type to be used on Ethernet and FastEthernet subinterfaces.
+- Fixed a bug causing exec-timeout configured under line console mode to appear in line vty mode.
+- Fixed a Next Hop Resolution Protocol (NHRP) bug which allowed duplicate Next Hop Servers (NHS) to be configured.
+- Improved the show clock command to display the day of the week.
+- Updated OSPF passive-interfaces to go down immediately after being set to passive.</Notes>
+  </ReleaseNote>
+  <ReleaseNote>
+	<Version>10.0</Version>
+	<ReleaseDate>2014-09-09T00:00:00</ReleaseDate>
+	<Notes>- Added 8 new CCNP labs for CCNPv5.
+- Added support for non-English standard keyboards.
+- Added a new switch device (3750).
+- Added support EIGRP Named mode configuration.
+- Added support for Dynamic Multipoint Virtual Private Network (DMVPN).
+- Added support for Next Hop Resolution Protocol (NHRP).
+- Added support for Hot Standby Router Protocol (HSRP) md5 and plain text authentication.
+- Improved support for IPSec and Generic Routing Encapsulation (GRE).
+- Added support for the [no] ip next-hop-self command.
+- Added support for IPv6 on sub-interfaces.
+- Updated the default behavior of EIGRP auto-summary to be disabled. 
+- Fixed an EIGRP bug causing routes to incorrectly get Stuck in Active (SIA) when feasible successors exist.
+- Fixed a bug in the ipconfig /all output that incorrectly displayed the state of DHCP.
+- Fixed a bug with the undebug all command not disabling debugging for: ppp authentication, ppp negotiation, dialer events, dialer packets, ip icmp, and ip nat.
+- Removed legacy 1900 switch from Network Designer.
+- Updated NetSim User Manual.</Notes>
+  </ReleaseNote>
+  <ReleaseNote>
+	<Version>9.9</Version>
+	<ReleaseDate>2014-04-22T00:00:00</ReleaseDate>
+	<Notes>- Added new guided tip service.
+- Added sample content for Lab Compiler.
+- Added support for the ip helper address command on Serial and Gigabit interfaces.
+- Added support for the port-security command in interface-range mode.
+- Updated demonstration video link in Home component.
+- Revised content tabs. Courseware now appears in its own tab separate "Standard" labs.
+- Fixed a VLAN propagation issue when VTP domain was set to NULL.
+- Fixed multiple DHCP issues.
+- Fixed an invalid MAC-address issue on VLAN 1.
+- Fixed a port-security issue where the maximum default ports were not learned.
+- Fixed an issue where HSRP was not operating over Gigabit interfaces in an EtherChannel bundle.
+- Fixed an HSRP preempt issue.
+- Fixed switch reload command to enable interfaces by default.
+- Fixed HSRP interface tracking to work on interfaces configured with a non-default priority.
+- Fixed an issue with removing spanning-tree bpduguard enable.
+- Removed the Firewall warning on NetSim first launch. Only telnet mode now triggers Windows firewall.</Notes>
+  </ReleaseNote>
+  <ReleaseNote>
+	<Version>9.8</Version>
+	<ReleaseDate>2014-03-04T00:00:00</ReleaseDate>
+	<Notes>- Added support for configuring the Administrative Distance in EIGRP.
+- Added support for configuring the Administrative Distance in OSPF.
+- Added support for the EIGRP log-neighbor-changes/warnings to appear in the running-config.
+- Added support for disabling log-neighbor-changes/warnings in EIGRP IPv6.
+- Added ACL protocol matching for DNS.
+- Added the "no mpls ip" command to the running-config.
+- Updated global MPLS to be enabled by default.
+- Updated MPLS logic to require MPLS to be enabled to send packets AND the local interface to be enabled.
+- Updated show mpls interfaces function to display when MPLS is globally disabled.
+- Updated ACL list logic and sorting.
+- Removed requirement that an EIGRP (IPv4) process must have at least one network command to appear in the running-config.
+- Fixed an issue on switches where a static route to 0.0.0.0 0.0.0.0.0 was displayed in addition to the ip default-gateway address.
+- Fixed an internal RIB issue in OSPF to prevent adding O IA routes with no next hop.
+- Fixed a global RIB issue where D EX routes were not sticking. 
+- Fixed an EIGRP IPv6 bug related to configuring multiple EIGRP IPv6 processes.
+- Fixed gateway of last resort bug incorrectly displaying local outgoing interface IP instead of next hop IP.
+- Fixed an issue in OSPF that would remove all paths to a single route instead a single path.
+- Fixed many minor lab content issues.</Notes>
+  </ReleaseNote> 
+  <ReleaseNote>
+	<Version>9.7</Version>
+	<ReleaseDate>2014-01-29T00:00:00</ReleaseDate>
+	<Notes>- Integrated Boson Courseware distribution with NetSim.
+- Added support for removing failed activation keys.
+- Fixed an issue with static routes configured with a next-hop interface name.
+- Fixed a broadcast issue over EtherChannel interfaces. 
+- Fixed several minor lab document issues.</Notes>
+  </ReleaseNote> 
+  <ReleaseNote>
+	<Version>9.6</Version>
+	<ReleaseDate>2014-01-13T00:00:00</ReleaseDate>
+	<Notes>- Added 9 new ICND1/ICND2 labs.
+- Fixed an issue with DHCP Class C pools.
+- Fixed a global routing table issue where multiple paths were not displayed correctly.
+- Fixed an EIGRP IPv6 debugging issue after an Autonomous System (AS) was removed. 
+- Fixed an issue with the console locking up when a Crypto Key is generated.
+- Fixed an issue with the ip domain-lookup command not loading correctly from previously saved configurations.
+- Fixed a port-security issue not blocking ports properly when a MAC-address violation occurs.
+- Fixed multiple minor lab document issues.
+- Happy New Year!</Notes>
+  </ReleaseNote>  
+  <ReleaseNote>
+	<Version>9.5</Version>
+	<ReleaseDate>2013-10-29T00:00:00</ReleaseDate>
+	<Notes>- Added support for License Server.
+- Added support for the default-information originate command.
+- Added support for the banner exec command.
+- Added DHCP support to switches.
+- Updated "Open All Console" feature to focus the first console.
+- Updated the Configuration Register behavior to be more accurate.
+- Updated DNS resolution to not be case-sensitive.
+- Fixed a minor issue with the show ipv6 protocols command when running EIGRP.
+- Fixed several minor MSTP output issues.
+- Fixed display issue in show vlan access command.
+- Fixed an issue with the login prompt displaying without the login command.
+- Fixed an issue with the Compatibility Tester packaging log files.
+- Fixed an ARP issue that could lock the simulator.
+- Fixed display for the show cdp neighbors command when subinterfaces exist.
+- Fixed an issue that prevented one from removing static ip routes.
+- Fixed password encryption during the setup wizard.
+- Fixed the ipv6 ospf area command to display the process-id correctly.</Notes>
+  </ReleaseNote>
+  <ReleaseNote>
+	<Version>9.4</Version>
+	<ReleaseDate>2013-10-01T00:00:00</ReleaseDate>
+	<Notes>- Added support for NetFlow.
+- Added support for Enhanced Interior Gateway Routing Protocol (EIGRP) for IPv6.
+- Added support for EIGRP over tunnel interfaces.
+- Added support for sorting ACLs by line numbers.
+- Added several existing EtherChannel commands to CCNA.
+- Added several existing Layer 3 switching commands to CCNA.
+- Added support for the no service dhcp command.
+- Updated output for the show ipv6 protocols command.
+- Updated output for the show standby variance command.
+- Fixed configuration prompt displayed for Open Shortest Path First version 3 (OSPFv3). 
+- Fixed OSPFv3 running-config for loopback interfaces.
+- Fixed OSPFv3 automatic router-id selection.
+- Fixed minor sequence number issue for lost OSPF Link-State Advertisements (LSAs).
+- Fixed minor VTP domain name NULL issue.
+- Fixed ip route command to disallow local IP addresses for next hops.
+- Fixed line and protocol state inconsistencies for GRE tunnels and serial interfaces.
+- Fixed PING output on PCs when two or more Domain Name System (DNS) servers configured.
+- Fixed mac-address table purging for disabled interfaces.
+- Fixed a minor Spanning Tree Protocol (STP) Topology Change Notification (TCN) packet issue.
+- Fixed a minor banner motd/login/exe message formatting issue.</Notes>
+  </ReleaseNote>
+  <ReleaseNote>
+	<Version>9.3</Version>
+	<ReleaseDate>2013-09-10T00:00:00</ReleaseDate>
+	<Notes>- Added 3 new ICND1 labs (Numbered ACLs, DHCP, DHCP Relay Agent) and 1 new ICND2 lab (Troubleshooting ACLs).
+- Added support for Dynamic Host Configuration Protocol (DHCP).
+- Added support for sequence numbers in Access Control Lists (ACLs).
+- Added support for exporting a topology.
+- Added many new commands for configuring ACLs on 3550 switches.
+- Fixed removing whole ACLs.
+- Fixed named ACL issue when assigned to interfaces.
+- Fixed ACL filtering Address Resolution Protocol (ARP) issue.
+- Fixed ACL case sensitivity.
+- Fixed packet filtering for removed ACLs issue.
+- Fixed packet filtering for non-existent ACLs.
+- Fixed multiple minor lab document issues.</Notes>
+  </ReleaseNote>
+  <ReleaseNote>
+    <Version>9.2</Version>
+    <ReleaseDate>2013-08-20T00:00:00</ReleaseDate>
+    <Notes>- Added 3 new CCENT labs: Configuring DNS, Configuring NTP, and Configuring NTP Authentication.
+- Added support for Network Time Protocol (NTP).
+- Added support for Domain Name System (DNS).
+- Added a new Boson Text Editor for editing text files on PC.
+- Added ability to pop-out NetMap.
+- Added ability to close individual device consoles.
+- Added "Open All Devices" feature.
+- Added support for remembering window size and position.
+- Added a new hipster release notes window.
+- Fixed console text not appearing at the bottom of console windows.
+- Fixed "show interface trunk" command when a specific port is given.
+- Fixed IPv6 case-sensitive addresses.
+- Fixed moved previously-saved items not being removed.
+- Fixed internal interface references for channel-group members.
+- Fixed multiple minor lab document issues.</Notes>
+  </ReleaseNote>
+  <ReleaseNote>
+    <Version>9.1</Version>
+    <ReleaseDate>2013-07-30T00:00:00</ReleaseDate>
+    <Notes>- Added a configurable default path for saved files.
+- Added sorting in show startup/running-config for RIP network statements, EIGRP network statements, STP instances, and subinterfaces.
+- Fixed routing loop caused by a packet time-to-live issue over frame-relay connections.
+- Fixed lab progress dialog's device count for edited topologies.
+- Fixed command history inconsistency.
+- Fixed check for updates window/NetSim closing sequence.
+- Fixed proxy-server configuration issue.
+- Fixed external lab viewer to prevent multiple instances.
+- Fixed home screen's reference of the wrong version.
+- Fixed multiple minor lab document issues.
+- Removed error log from writing to desktop in some instances.
+- Updated every lab document to fix underscore and dash character rendering.</Notes>
+  </ReleaseNote>
+</ArrayOfReleaseNote>

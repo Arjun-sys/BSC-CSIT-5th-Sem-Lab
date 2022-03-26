@@ -1,0 +1,73 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="labsheet3.css">
+<script type="text/javascript">
+		function check()
+		{
+
+			//checking of name
+			var condition=/^[A-Za-z0-1]{5,13}$/;//space is placed at the last of [] in /^[A-Za-z ]+$/
+			var v_name=document.getElementById("uname").value;
+			var result=v_name.match(condition);
+			if(v_name=="")
+			{
+				alert("Please enter Username");
+				return false;
+			}
+			else if(v_name!=result){
+				alert("Enter the valid name");
+				return false;
+			 }
+
+			 //checking of password
+	
+			 var cond=/^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[@$!%*?&])[A-Za-z0-9@$!%*?&]{8,10}$/;
+			 var pass=document.getElementById("psw").value;
+			 var res=pass.match(cond);
+			 if(pass=="")
+			 {
+			 	alert("Please enter password");
+			 	return false;
+			 }
+			 else if(!res)
+			 {
+			 	alert("Enter valid password");
+			 	return false;
+			 }
+
+		}
+	</script>
+</head>
+<body>
+
+<h2>Login Form</h2>
+
+
+<form  method="post" onsubmit="check()">
+  <div class="imgcontainer">
+    <img src="log.jpg" alt="Avatar" class="avatar">
+  </div>
+
+  <div class="container">
+    <label for="uname"><b>Username</b></label>
+    <input type="text" placeholder="Enter Username" name="uname" id="uname" >
+
+    <label for="psw"><b>Password</b></label>
+    <input type="password" placeholder="Enter Password" name="psw" id="psw" >
+        
+    <button type="submit">Login</button>
+    <label>
+      <input type="checkbox" checked="checked" name="remember"> Remember me
+    </label>
+  </div>
+
+  <div class="container" style="background-color:#f1f1f1">
+    <button type="button" class="cancelbtn">Cancel</button>
+
+  </div>
+</form>
+
+</body>
+</html>

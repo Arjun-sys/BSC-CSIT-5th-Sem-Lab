@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<rss version="2.0">
+
+<channel>
+<title>Special Offers from Boson</title>
+<description>See your special offers at boson.com.</description>
+<link>http://www.boson.com/account/specialoffers</link>
+<lastBuildDate>Fri, 7 Jun 2013 09:00:00 -0400 </lastBuildDate>
+<pubDate>Fri, 7 Jun 2013 09:00:00 -0400</pubDate>
+
+<item>
+<title>Special Offers from Boson</title>
+<description>See your special offers at boson.com.</description>
+<link>http://www.boson.com/account/specialoffers</link>
+<guid isPermaLink="false"> 1102345</guid>
+<pubDate>Fri, 7 Jun 2013 09:00:00 -0400</pubDate>
+</item>
+
+</channel>
+</rss>
